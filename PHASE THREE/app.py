@@ -82,7 +82,8 @@ if options == "Job Recommendation":
     with tab2:
         st.write("Here are your job recommendations:")
         
-        
+        if "recommended_jobs" not in st.session_state:
+            st.session_state.recommended_jobs = []
         recommended_jobs = st.session_state.recommended_jobs 
         if "recommended_jobs" in st.session_state and st.session_state.recommended_jobs:
             display_recommended_jobs(recommended_jobs)

@@ -114,6 +114,7 @@ def recommend_jobs(user_skills):
         })
     return recommended_jobs
 def display_recommended_jobs(recommended_jobs):
+    
     if not recommended_jobs:
         st.write("No recommendations found.")
         return
